@@ -1,0 +1,374 @@
+/* ===================================
+    cores, fontes e organização
+   da página.
+=================================== */
+
+/* Define a fonte, cor de fundo e cor do texto */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #6d460b;
+    color: #f6eeee;
+    line-height: 1.6;
+}
+
+
+/* ===================================
+  CABEÇALHO E LOGO
+=================================== */
+
+/* Área do cabeçalho */
+
+header {
+    text-align: center;
+    background-color: #785112;
+    padding-bottom: 20px;
+}
+
+
+/* Estilização da logo */
+
+header img {
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===================================
+   MENU DE NAVEGAÇÃO
+=================================== */
+
+nav {
+    background-color: #6d460b;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+
+/* Links do menu */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+
+/* - interação visual com o mouse */
+
+nav a:hover {
+    background-color: #d88b26;
+}
+
+
+/* ===================================
+   TÍTULOS E TEXTOS
+=================================== */
+
+h1 {
+    color: #e0b495;
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+
+h3 {
+    color: #f0edeb;
+    margin-bottom: 20px;
+}
+
+
+/* Centraliza as seções */
+
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+    color: #e0b495;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* ===================================
+   PRODUTOS E SERVIÇOS
+=================================== */
+
+/* Caixa de cada produto ou serviço */
+
+article {
+    background-color: #ffffff;
+    border: 1px solid #625959;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    min-width: 300px;
+    font-size: 18px;
+    color: #3b2412;
+}
+
+
+/* Imagens dos produtos e serviços */
+
+article img {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Nome dos produtos e serviços */
+
+article h3 {
+    color: #978171;
+    margin-bottom: 10px;
+}
+
+
+/* Preços */
+
+article p b,
+article p strong {
+    background-color: #e0b495;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+
+/* ===================================
+   FORMULÁRIOS
+=================================== */
+
+/* Formulário de busca e cadastro */
+
+form {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+
+/* Texto dos campos */
+
+form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* Campo de busca */
+
+form input {
+    padding: 10px;
+    border: 2px solid #f5f3f3;
+    border-radius: 35px;
+    width: 55%;
+}
+
+
+/* Botão de busca */
+
+form button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #6d460b;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Aula 8 - efeito quando passa o mouse */
+
+form button:hover {
+    background-color: #f97316;
+}
+
+
+/* ===================================
+   CADASTRO E AGENDAMENTO
+=================================== */
+
+/* Caixa de cada parte do cadastro */
+
+.form-secao {
+    background-color: #ffffff;
+    color: #3b2412;
+    border: 1px solid #625959;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+
+/* Títulos das partes do formulário */
+
+.form-secao legend {
+    color: #6d460b;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0b495;
+}
+
+
+/* Campos do formulário */
+
+.form-secao input,
+.form-secao textarea {
+    border: 2px solid #e0b495;
+    border-radius: 8px;
+}
+
+
+/* Campo quando recebe foco */
+
+.form-secao input:focus,
+.form-secao textarea:focus {
+    border-color: #d88b26;
+    box-shadow: 0 0 0 0.2rem rgba(216, 139, 38, 0.25);
+}
+
+
+/* Botão do cadastro */
+
+.btn-petshop {
+    background-color: #e0b495;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+
+/* Efeito do botão */
+
+.btn-petshop:hover {
+    background-color: #d88b26;
+    color: white;
+}
+
+
+/* ===================================
+   RESUMO DO AGENDAMENTO
+=================================== */
+
+/* Área preenchida pelo JavaScript */
+
+#resumoAgendamento {
+    display: none;
+    background-color: #ffffff;
+    color: #3b2412;
+    border: 2px solid #e0b495;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+
+/* ===================================
+   ACESSIBILIDADE
+=================================== */
+
+/* Link para pular diretamente para o conteúdo */
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #d88b26;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+/* Mostra o link quando recebe foco */
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* Foco visível para navegação */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #e0b495;
+    outline-offset: 2px;
+}
+
+
+/* ===================================
+   RODAPÉ
+=================================== */
+
+footer {
+    background-color: #785112;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 0.8rem;
+}
+
+
+footer address {
+    font-style: normal;
+    margin-top: 10px;
+}
+
+
+/* ===================================
+   IMAGENS RESPONSIVAS
+=================================== */
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 576px) {
+
+    article {
+        width: 90%;
+        min-width: auto;
+    }
+
+    form input {
+        width: 90%;
+    }
+
+    header img {
+        max-width: 80%;
+        height: auto;
+    }
+
+}

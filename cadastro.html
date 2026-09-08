@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro e Agendamento - Petshop Coradi</title>
+
+    <!-- Aula 9: utilização do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Aula 7: arquivo CSS do site -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Aula 10: recurso de acessibilidade para facilitar a navegação -->
+    <a class="skip-link visually-hidden-focusable"
+       href="#conteudo-principal">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- Aula 9: navbar do Bootstrap -->
+    <nav> 
+                    <a href="index.html">Home</a> |
+                    <a href="produtos.html">Produtos</a> |
+                    <a href="servicos.html">Serviços</a> |
+                    <a href="cadastro.html">Cadastro</a>
+                </nav>
+
+
+    <main id="conteudo-principal" class="container my-4">
+
+        <h2 class="titulo-secao">
+            Cadastro e Agendamento
+        </h2>
+
+        <p class="text-center mb-4">
+            Preencha seus dados, os dados do seu pet e escolha
+            o serviço e a forma de agendamento.
+        </p>
+
+
+        <!-- Aula 6: formulário de cadastro e agendamento -->
+        <form id="formCadastro"
+              class="needs-validation"
+              novalidate>
+
+
+            <!-- Aula 6: dados do cliente -->
+            <fieldset class="form-secao">
+
+                <legend>Seus Dados</legend>
+
+                <div class="row g-3">
+
+
+                    <div class="col-md-6">
+
+                        <label for="nomeCliente" class="form-label">
+                            Nome completo *
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="nomeCliente"
+                               name="nomeCliente"
+                               placeholder="Ex.: Maria da Silva"
+                               required>
+
+                        <div class="invalid-feedback">
+                            Por favor, informe seu nome completo.
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label for="cpfCliente" class="form-label">
+                            CPF *
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="cpfCliente"
+                               name="cpfCliente"
+                               placeholder="000.000.000-00"
+                               pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                               required>
+
+                        <div class="invalid-feedback">
+                            Informe um CPF válido.
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <label for="enderecoCliente" class="form-label">
+                            Endereço completo *
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="enderecoCliente"
+                               name="enderecoCliente"
+                               placeholder="Rua, número, bairro, cidade - UF"
+                               required>
+
+                        <div class="invalid-feedback">
+                            Informe seu endereço completo.
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label for="telefoneCliente" class="form-label">
+                            Telefone *
+                        </label>
+
+                        <input type="tel"
+                               class="form-control"
+                               id="telefoneCliente"
+                               name="telefoneCliente"
+                               placeholder="(54) 99999-9999"
+                               pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}"
+                               required>
+
+                        <div class="invalid-feedback">
+                            Informe um telefone válido.
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label for="emailCliente" class="form-label">
+                            E-mail *
+                        </label>
+
+                        <input type="email"
+                               class="form-control"
+                               id="emailCliente"
+                               name="emailCliente"
+                               placeholder="petshop@exemplo.com"
+                               required>
+
+                        <div class="invalid-feedback">
+                            Informe um e-mail válido.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Aula 6: radio button -->
+                    <fieldset class="col-12">
+
+                        <legend class="col-form-label pt-0 fs-6">
+                            Sexo
+                        </legend>
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="sexoCliente"
+                                   id="sexoFeminino"
+                                   value="feminino">
+
+                            <label class="form-check-label"
+                                   for="sexoFeminino">
+                                Feminino
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="sexoCliente"
+                                   id="sexoMasculino"
+                                   value="masculino">
+
+                            <label class="form-check-label"
+                                   for="sexoMasculino">
+                                Masculino
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="sexoCliente"
+                                   id="sexoOutro"
+                                   value="outro">
+
+                            <label class="form-check-label"
+                                   for="sexoOutro">
+                                Prefiro não informar
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Aula 6: checkbox -->
+                    <div class="col-12">
+
+                        <div class="form-check">
+
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="aceitaContato"
+                                   name="aceitaContato"
+                                   required>
+
+                            <label class="form-check-label"
+                                   for="aceitaContato">
+
+                                Aceito ser contatado por telefone
+                                ou e-mail sobre o agendamento *
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- Aula 6: dados do pet -->
+            <fieldset class="form-secao">
+
+                <legend>Dados do seu Pet</legend>
+
+                <div class="row g-3">
+
+
+                    <div class="col-md-4">
+
+                        <label for="nomePet" class="form-label">
+                            Nome do pet *
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="nomePet"
+                               name="nomePet"
+                               placeholder="Ex.: Bolinha"
+                               required>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <label for="racaPet" class="form-label">
+                            Raça *
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               id="racaPet"
+                               name="racaPet"
+                               placeholder="Ex.: Poodle, SRD, Siamês..."
+                               required>
+
+                    </div>
+
+
+                    <!-- Aula 6: campo numérico -->
+                    <div class="col-md-4">
+
+                        <label for="idadePet" class="form-label">
+                            Idade (anos) *
+                        </label>
+
+                        <input type="number"
+                               class="form-control"
+                               id="idadePet"
+                               name="idadePet"
+                               min="0"
+                               max="40"
+                               step="1"
+                               placeholder="Ex.: 3"
+                               required>
+
+                    </div>
+
+
+                    <fieldset class="col-12">
+
+                        <legend class="col-form-label pt-0 fs-6">
+                            Espécie *
+                        </legend>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="especiePet"
+                                   id="especieCao"
+                                   value="cao"
+                                   required>
+
+                            <label class="form-check-label"
+                                   for="especieCao">
+                                Cão
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="especiePet"
+                                   id="especieGato"
+                                   value="gato">
+
+                            <label class="form-check-label"
+                                   for="especieGato">
+                                Gato
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="especiePet"
+                                   id="especieOutro"
+                                   value="outro">
+
+                            <label class="form-check-label"
+                                   for="especieOutro">
+                                Outro
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <div class="col-12">
+
+                        <div class="form-check">
+
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="petVacinado"
+                                   name="petVacinado">
+
+                            <label class="form-check-label"
+                                   for="petVacinado">
+
+                                Meu pet está com as vacinas em dia
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- Aula 6: serviço e agendamento -->
+            <fieldset class="form-secao">
+
+                <legend>Serviço e Agendamento</legend>
+
+                <div class="row g-3">
+
+
+                    <!-- Aula 6: escolha dos serviços -->
+                    <fieldset class="col-12">
+
+                        <legend class="col-form-label pt-0 fs-6">
+                            Serviço desejado *
+                        </legend>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input servico-check"
+                                   type="checkbox"
+                                   name="servico"
+                                   id="servicoBanho"
+                                   value="Banho">
+
+                            <label class="form-check-label"
+                                   for="servicoBanho">
+                                Banho
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input servico-check"
+                                   type="checkbox"
+                                   name="servico"
+                                   id="servicoTosa"
+                                   value="Tosa">
+
+                            <label class="form-check-label"
+                                   for="servicoTosa">
+                                Tosa
+                            </label>
+
+                        </div>
+
+
+                        <div class="invalid-feedback d-none"
+                             id="erroServico">
+
+                            Selecione ao menos um serviço.
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- Aula 6: forma de agendamento -->
+                    <fieldset class="col-12">
+
+                        <legend class="col-form-label pt-0 fs-6">
+                            Forma de agendamento *
+                        </legend>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="metodoAgendamento"
+                                   id="metodoTeleBusca"
+                                   value="tele-busca"
+                                   required>
+
+                            <label class="form-check-label"
+                                   for="metodoTeleBusca">
+
+                                Tele-busca (buscamos seu pet)
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check form-check-inline">
+
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="metodoAgendamento"
+                                   id="metodoEntrega"
+                                   value="entrega no local">
+
+                            <label class="form-check-label"
+                                   for="metodoEntrega">
+
+                                Entrega no local
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Aula 8: mensagens controladas pelo JavaScript -->
+                        <p id="avisoTeleBusca"
+                           class="form-text mt-2 d-none"
+                           role="status">
+
+                            Nossa equipe irá até o endereço informado
+                            para buscar seu pet no horário agendado.
+
+                        </p>
+
+
+                        <p id="avisoEntrega"
+                           class="form-text mt-2 d-none"
+                           role="status">
+
+                            Traga seu pet até a Rua das Flores, 123 -
+                            Centro, Flores da Cunha - RS.
+
+                        </p>
+
+                    </fieldset>
+
+
+
+                    <!-- Aula 6: data e horário -->
+                    <div class="col-md-6">
+
+                        <label for="agendamento" class="form-label">
+
+                            Data e horário do agendamento *
+
+                        </label>
+
+                        <input type="datetime-local"
+                               class="form-control"
+                               id="agendamento"
+                               name="agendamento"
+                               required>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label for="observacoes" class="form-label">
+
+                            Observações
+
+                        </label>
+
+                        <textarea class="form-control"
+                                  id="observacoes"
+                                  name="observacoes"
+                                  rows="1"
+                                  placeholder="Alguma informação importante sobre seu pet?">
+                        </textarea>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <div class="text-center">
+
+                <button type="submit"
+                        class="btn btn-petshop btn-lg">
+
+                    Confirmar cadastro e agendamento
+
+                </button>
+
+            </div>
+
+
+            <!-- Aula 8: local onde o JavaScript mostra o resumo -->
+            <div id="resumoAgendamento"
+                 role="alert"
+                 aria-live="polite">
+            </div>
+
+        </form>
+
+    </main>
+
+
+
+    <!-- Aula 10: rodapé organizado -->
+    <footer>
+
+        <p>© 2026 Petshop Coradi. Todos os direitos reservados.</p>
+            <address>
+            <p>Rua das Flores, 123 - Centro</p>
+            <p>Flores da Cunha - RS</p>
+            <p> cep: 89840-000</p>
+            <p>Telefone: (54) 1234-5678</p>
+            <p>Email: contato@petshopcoradi.com.br</p>
+            </address>
+
+    </footer>
+
+
+    <!-- Aula 9: JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Aula 8: arquivo JavaScript do projeto -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
