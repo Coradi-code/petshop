@@ -13,3 +13,6 @@ Sistema publicado (GitHub Pages ou similar): https://coradi-code.github.io/petsh
 Observação
 
 O arquivo 'Serviços' foi removido e recriado utilizando nomenclatura em letras minúsculas. Essa alteração foi necessária porque o GitHub diferencia letras maiúsculas e minúsculas nos nomes dos arquivos (case-sensitive), e o código HTML fazia referência ao arquivo em minúsculo. A substituição do arquivo foi a solução adotada para evitar problemas de navegação e referência.
+
+-
+dificuldades encontrata no CSS/ bootstrap assim como o aba de formulário, o auxilio de ferramenta AI foi um grande suporte para completar a fase. 
